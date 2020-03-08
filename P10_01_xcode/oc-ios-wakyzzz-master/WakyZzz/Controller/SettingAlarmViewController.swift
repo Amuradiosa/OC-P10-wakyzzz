@@ -9,18 +9,18 @@
 import Foundation
 import UIKit
 
-protocol AlarmViewControllerDelegate {
+protocol SettingAlarmViewControllerDelegate {
     func alarmViewControllerDone(alarm: Alarm)
     func alarmViewControllerCancel()
 }
 
-class AlarmViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SettingAlarmViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var tableView: UITableView!
     var alarm: Alarm?
     
-    var delegate: AlarmViewControllerDelegate?
+    var delegate: SettingAlarmViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,6 +80,9 @@ class AlarmViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     @IBAction func doneButtonPress(_ sender: Any) {
+        
+//        print(alarm?.alarmDate!)
+//        print(alarm?.time)
         delegate?.alarmViewControllerDone(alarm: alarm!)
         presentingViewController?.dismiss(animated: true, completion: nil)
     }

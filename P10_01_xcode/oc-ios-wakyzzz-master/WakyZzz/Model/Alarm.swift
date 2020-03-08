@@ -6,13 +6,14 @@
 //  Copyright © 2018 Olga Volkova OC. All rights reserved.
 //
 
-import Foundation 
+import Foundation
 
-class Alarm { 
+class Alarm {
+    
     
     static let daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
     
-    var time = 8 * 360
+    var time = 8 * 3600
     var repeatDays = [false, false, false, false, false, false, false]
     var enabled = true
     
@@ -49,7 +50,7 @@ class Alarm {
     
     func setTime(date: Date) {
         let calendar = Calendar.current
-        var components = calendar.dateComponents([.hour, .minute, .month, .year, .day, .second, .weekOfMonth], from: date as Date)
+        let components = calendar.dateComponents([.hour, .minute, .month, .year, .day, .second, .weekOfMonth], from: date as Date)
         
         time = components.hour! * 3600 + components.minute! * 60        
     }
