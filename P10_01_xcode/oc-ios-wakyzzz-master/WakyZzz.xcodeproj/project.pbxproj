@@ -16,11 +16,17 @@
 		0424EB6B20BEF96400E15E46 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424EB6A20BEF96400E15E46 /* Action.swift */; };
 		0424EB6D20BF022900E15E46 /* AlarmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424EB6C20BF022900E15E46 /* AlarmTableViewCell.swift */; };
 		0424EB6F20BF0FAE00E15E46 /* SettingAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424EB6E20BF0FAE00E15E46 /* SettingAlarmViewController.swift */; };
-		0424EB7120C038AE00E15E46 /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0424EB7020C038AE00E15E46 /* sound.mp3 */; };
 		1581E9AB2408787B002F4D4F /* WakyZzz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1581E9A92408787B002F4D4F /* WakyZzz.xcdatamodeld */; };
 		1581E9B2240A70DF002F4D4F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1581E9B1240A70DF002F4D4F /* CoreDataManager.swift */; };
 		1581E9C02415575D002F4D4F /* Alarms+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1581E9BE2415575D002F4D4F /* Alarms+CoreDataClass.swift */; };
 		1581E9C12415575D002F4D4F /* Alarms+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1581E9BF2415575D002F4D4F /* Alarms+CoreDataProperties.swift */; };
+		1581E9C824276922002F4D4F /* AppDelegateNotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1581E9C724276922002F4D4F /* AppDelegateNotificationExtension.swift */; };
+		1581E9CA24276945002F4D4F /* NotificationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1581E9C924276945002F4D4F /* NotificationDelegate.swift */; };
+		1581E9D42427EFB5002F4D4F /* firstSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1581E9D32427EFB5002F4D4F /* firstSound.mp3 */; };
+		1581E9D624280ECA002F4D4F /* scarySound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1581E9D524280ECA002F4D4F /* scarySound.mp3 */; };
+		1581E9D82428138E002F4D4F /* secondSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1581E9D72428138E002F4D4F /* secondSound.mp3 */; };
+		1581E9DA2429183E002F4D4F /* KindnessBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1581E9D92429183E002F4D4F /* KindnessBank.swift */; };
+		1581E9DD242A8457002F4D4F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1581E9DC242A8457002F4D4F /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,11 +41,17 @@
 		0424EB6A20BEF96400E15E46 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		0424EB6C20BF022900E15E46 /* AlarmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmTableViewCell.swift; sourceTree = "<group>"; };
 		0424EB6E20BF0FAE00E15E46 /* SettingAlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAlarmViewController.swift; sourceTree = "<group>"; };
-		0424EB7020C038AE00E15E46 /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound.mp3; sourceTree = "<group>"; };
 		1581E9AA2408787B002F4D4F /* WakyZzz.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WakyZzz.xcdatamodel; sourceTree = "<group>"; };
 		1581E9B1240A70DF002F4D4F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		1581E9BE2415575D002F4D4F /* Alarms+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alarms+CoreDataClass.swift"; sourceTree = "<group>"; };
 		1581E9BF2415575D002F4D4F /* Alarms+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alarms+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1581E9C724276922002F4D4F /* AppDelegateNotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateNotificationExtension.swift; sourceTree = "<group>"; };
+		1581E9C924276945002F4D4F /* NotificationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDelegate.swift; sourceTree = "<group>"; };
+		1581E9D32427EFB5002F4D4F /* firstSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = firstSound.mp3; sourceTree = "<group>"; };
+		1581E9D524280ECA002F4D4F /* scarySound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = scarySound.mp3; sourceTree = "<group>"; };
+		1581E9D72428138E002F4D4F /* secondSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = secondSound.mp3; sourceTree = "<group>"; };
+		1581E9D92429183E002F4D4F /* KindnessBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KindnessBank.swift; sourceTree = "<group>"; };
+		1581E9DC242A8457002F4D4F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +84,7 @@
 		0424EB5220BEF89000E15E46 /* WakyZzz */ = {
 			isa = PBXGroup;
 			children = (
+				1581E9C624276861002F4D4F /* Notifications */,
 				1581E9AC24087885002F4D4F /* CoreData */,
 				1581E97F2403DF02002F4D4F /* Components */,
 				1581E97D2403DEAC002F4D4F /* Model */,
@@ -90,6 +103,8 @@
 			children = (
 				0424EB6820BEF93F00E15E46 /* Alarm.swift */,
 				0424EB6A20BEF96400E15E46 /* Action.swift */,
+				1581E9D92429183E002F4D4F /* KindnessBank.swift */,
+				1581E9DC242A8457002F4D4F /* Constants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -123,7 +138,9 @@
 		1581E9812403DF32002F4D4F /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				0424EB7020C038AE00E15E46 /* sound.mp3 */,
+				1581E9D32427EFB5002F4D4F /* firstSound.mp3 */,
+				1581E9D72428138E002F4D4F /* secondSound.mp3 */,
+				1581E9D524280ECA002F4D4F /* scarySound.mp3 */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -145,6 +162,15 @@
 				1581E9B1240A70DF002F4D4F /* CoreDataManager.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		1581E9C624276861002F4D4F /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				1581E9C724276922002F4D4F /* AppDelegateNotificationExtension.swift */,
+				1581E9C924276945002F4D4F /* NotificationDelegate.swift */,
+			);
+			path = Notifications;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,10 +232,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0424EB7120C038AE00E15E46 /* sound.mp3 in Resources */,
 				0424EB5E20BEF89100E15E46 /* LaunchScreen.storyboard in Resources */,
+				1581E9D42427EFB5002F4D4F /* firstSound.mp3 in Resources */,
+				1581E9D82428138E002F4D4F /* secondSound.mp3 in Resources */,
 				0424EB5B20BEF89100E15E46 /* Assets.xcassets in Resources */,
 				0424EB5920BEF89000E15E46 /* Main.storyboard in Resources */,
+				1581E9D624280ECA002F4D4F /* scarySound.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,14 +250,18 @@
 			files = (
 				0424EB5620BEF89000E15E46 /* AlarmsViewController.swift in Sources */,
 				0424EB6D20BF022900E15E46 /* AlarmTableViewCell.swift in Sources */,
+				1581E9C824276922002F4D4F /* AppDelegateNotificationExtension.swift in Sources */,
 				0424EB6F20BF0FAE00E15E46 /* SettingAlarmViewController.swift in Sources */,
 				1581E9C02415575D002F4D4F /* Alarms+CoreDataClass.swift in Sources */,
 				0424EB5420BEF89000E15E46 /* AppDelegate.swift in Sources */,
 				0424EB6B20BEF96400E15E46 /* Action.swift in Sources */,
+				1581E9CA24276945002F4D4F /* NotificationDelegate.swift in Sources */,
 				1581E9AB2408787B002F4D4F /* WakyZzz.xcdatamodeld in Sources */,
 				1581E9B2240A70DF002F4D4F /* CoreDataManager.swift in Sources */,
 				0424EB6920BEF93F00E15E46 /* Alarm.swift in Sources */,
+				1581E9DD242A8457002F4D4F /* Constants.swift in Sources */,
 				1581E9C12415575D002F4D4F /* Alarms+CoreDataProperties.swift in Sources */,
+				1581E9DA2429183E002F4D4F /* KindnessBank.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

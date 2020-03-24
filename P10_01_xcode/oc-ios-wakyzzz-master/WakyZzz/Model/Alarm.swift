@@ -10,12 +10,12 @@ import Foundation
 
 class Alarm {
     
-    
     static let daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
     
     var time = 8 * 3600
     var repeatDays = [false, false, false, false, false, false, false]
     var enabled = true
+    var creationDateID: String?
     
     var alarmDate: Date? {
         let date = Date()
@@ -45,7 +45,7 @@ class Alarm {
                 captions.append(Alarm.daysOfWeek[i])
             }
         }
-        return captions.count > 0 ? captions.joined(separator: ", ") : "One time alarm"
+        return captions.count > 1 ? captions.joined(separator: ", ") : "One time alarm"
     }
     
     func setTime(date: Date) {

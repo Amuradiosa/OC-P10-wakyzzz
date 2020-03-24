@@ -22,13 +22,14 @@ class SettingAlarmViewController: UIViewController, UITableViewDelegate, UITable
     
     var delegate: SettingAlarmViewControllerDelegate?
     
+    // MARK: - 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         config()
     }
     
-    func config() {        
+    private func config() {
         if alarm == nil {
             navigationItem.title = "New Alarm"
             alarm = Alarm()
@@ -80,9 +81,6 @@ class SettingAlarmViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     @IBAction func doneButtonPress(_ sender: Any) {
-        
-//        print(alarm?.alarmDate!)
-//        print(alarm?.time)
         delegate?.alarmViewControllerDone(alarm: alarm!)
         presentingViewController?.dismiss(animated: true, completion: nil)
     }

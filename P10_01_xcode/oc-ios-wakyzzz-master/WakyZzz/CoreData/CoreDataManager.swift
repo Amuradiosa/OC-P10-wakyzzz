@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 class CoreDataManager {
-    
+    // This class will follow the singleton code design pattern to allow us to use a single instance of CoreDataManager object to provide data throughout the whole application.
     static let shared = CoreDataManager()
     
     private init() {
@@ -19,7 +19,6 @@ class CoreDataManager {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var fetchedRC: NSFetchedResultsController<Alarms>!
-    
     
     func refresh() {
         let request = Alarms.fetchRequest() as NSFetchRequest<Alarms>
@@ -40,7 +39,8 @@ extension CoreDataManager {
     
     func fetchAlarm(with alarmCreationDateID: String) -> Alarms? {
         let request = Alarms.fetchRequest() as NSFetchRequest<Alarms>
-            request.predicate = NSPredicate(format: "creationDate == %@", alarmCreationDateID)
+
+            request.predicate = NSPredicate(format: "creationDateID == %@", alarmCreationDateID)
         do {
             return try context.fetch(request).first
         } catch let error as NSError {
@@ -49,14 +49,3 @@ extension CoreDataManager {
         return nil
     }
 }
-
-//    var repeating: String {
-//        var captions = [String]()
-//        let repeatingDays = [repeatSun,repeatMon,repeatTue,repeatWed,repeatThu,repeatFri,repeatSat]
-//        for i in 0 ..< 6 {
-//            if repeatingDays[i] {
-//                captions.append(Alarm.daysOfWeek[i])
-//            }
-//        }
-//        return captions.count > 0 ? captions.joined(separator: ", ") : "One time alarm"
-//    }
