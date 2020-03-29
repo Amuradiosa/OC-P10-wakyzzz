@@ -88,14 +88,12 @@ extension AppDelegate {
             }
         }
     }
-    
+    // This method to update alarm to turn off enabled attribute if it was a one time alarm
     func fetchStoredObjectAndUpdate(_ alarmCreationID: String) {
         if let alarm = CoreDataManager.shared.fetchAlarm(with: alarmCreationID) {
             let repeatDays = [alarm.repeatSun, alarm.repeatMon, alarm.repeatTue, alarm.repeatWed, alarm.repeatThu, alarm.repeatFri, alarm.repeatSat]
-            var enabledDays = repeatDays.filter({$0 == true})
-            if enabledDays.count == 1 {
+            if repeatDays.filter({$0 == true}).count == 0 {
                 alarm.enabled = false
-                enabledDays[0] = false
                 CoreDataManager.shared.appDelegate.saveContext()
                 removePendingNotificationFor(alarmID: alarm.creationDateID)
             }
@@ -159,7 +157,7 @@ extension AppDelegate {
         default:
             break
         }
-        // open sms app on the iphone with predetermined example of kind thoughts
+        // open sms app on the iphone and fill it with predetermined example of kind thoughts
         let sms: String = "sms:?&body=\(smsBody)"
         let strURL: String = sms.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
         UIApplication.shared.open(URL.init(string: strURL)!, options: [:], completionHandler: nil)

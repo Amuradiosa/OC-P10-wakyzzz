@@ -45,7 +45,7 @@ class Alarm {
                 captions.append(Alarm.daysOfWeek[i])
             }
         }
-        return captions.count > 1 ? captions.joined(separator: ", ") : "One time alarm"
+        return captions.count > 0 ? captions.joined(separator: ", ") : "One time alarm"
     }
     
     func setTime(date: Date) {

@@ -22,7 +22,7 @@ class SettingAlarmViewController: UIViewController, UITableViewDelegate, UITable
     
     var delegate: SettingAlarmViewControllerDelegate?
     
-    // MARK: - 
+    // MARK: - Configuration
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -44,6 +44,7 @@ class SettingAlarmViewController: UIViewController, UITableViewDelegate, UITable
         datePicker.date = (alarm?.alarmDate)!
     }
     
+    // MARK: - TabelView datasource and delegate method
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -76,6 +77,7 @@ class SettingAlarmViewController: UIViewController, UITableViewDelegate, UITable
         tableView.cellForRow(at: indexPath)?.accessoryType = (alarm?.repeatDays[indexPath.row])! ? .checkmark : .none
     }
     
+    // MARK: - Buttons Actions
     @IBAction func cancelButtonPress(_ sender: Any) {
         presentingViewController?.dismiss(animated: true, completion: nil)
     }

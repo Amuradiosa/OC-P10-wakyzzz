@@ -12,14 +12,12 @@ import UserNotifications
 extension AppDelegate {
     // this block of code only runs when app is running in foreground
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        // calling completion handler to specify how I want the system to alert the user
+        defer { completionHandler([.alert, .sound]) }
         // update alarm to turn off enabled attribute if it was a one time alarm
         fetchStoredObjectAndUpdate(notification.request.identifier)
-        // after updating the persisted object we need to loadAlarms to relect changes in UI
+        // after updating the persisted object we need to loadAlarms to reflect changes in UI
         ((window!.rootViewController as? UINavigationController)?.topViewController as? AlarmsViewController)?.loadAlarmsFromCoreDataAndPopulateTableView()
-        // calling completion handler to specify how I want the system to alert the user
-        completionHandler([.alert, .sound])
-        
-        // FIXME: - check if this delivered alarm has been removed
     }
     
     // process the user's response to a delivered notification.
@@ -68,7 +66,7 @@ extension AppDelegate {
             break
             
         case ActionButtonsID.Do_It_Later.rawValue:
-            actionButtonPressed(timeInterval: TimeInterval(Int.random(in: 60...70/*1800...7200*/)),
+            actionButtonPressed(timeInterval: TimeInterval(Int.random(in: 60...70/*7200...14400*/)),
                                 subtitle: "Have you completed the task yet?",
                                 body: "You promissed to complete a task for snoozing your alarm set for \(response.notification.request.content.categoryIdentifier).",
                 contentIdentifier: response.notification.request.identifier,
@@ -97,7 +95,6 @@ extension AppDelegate {
     private func reactBasedOnTheRunTimeStateOfApp(requestID: String) {
         
         let state = UIApplication.shared.applicationState
-        
         // when the app is running in the background.
         if state == .background {
             // update alarm to turn off enabled attribute if it was a one time alarm

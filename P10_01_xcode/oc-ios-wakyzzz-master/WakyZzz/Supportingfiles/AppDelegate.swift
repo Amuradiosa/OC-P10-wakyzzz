@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             if (granted) {
                 center.delegate = self
             } else {
-                
+                print("Notifications authorization has been declined")
             }
         }
         

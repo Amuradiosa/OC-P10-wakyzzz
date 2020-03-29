@@ -24,7 +24,6 @@ class AlarmsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     // MARK: - Configuration
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         config()
     }
     
@@ -33,7 +32,7 @@ class AlarmsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.dataSource = self
         CoreDataManager.shared.refresh()
         loadAlarmsFromCoreDataAndPopulateTableView()
-        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+//        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
     }
     // Populate initial two alarms
     private func populateAlarms() {
@@ -109,8 +108,6 @@ class AlarmsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         appDelegate?.removePendingNotificationFor(alarmID: (alarm(at: indexPath)?.creationDateID!)!)
         
         if let alarm = CoreDataManager.shared.fetchedRC?.object(at: indexPath) {
-            //            manageLocalNotification(alarm.enabled?, alarm.time, alarm.repeatedDays, alarm.creationDateID)
-            // or removePedingNotificationWith(indentifier: identifier)
             CoreDataManager.shared.context.delete(alarm)
             CoreDataManager.shared.appDelegate.saveContext()
         }
@@ -124,8 +121,6 @@ class AlarmsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         editingIndexPath = indexPath
         presentAlarmViewController(alarm: alarm(at: indexPath))
     }
-    
-    
     
     func moveAlarm(from originalIndextPath: IndexPath, to targetIndexPath: IndexPath) {
         let alarm = alarms.remove(at: originalIndextPath.row)
@@ -154,7 +149,7 @@ class AlarmsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func alarmViewControllerDone(alarm: Alarm) {
-        // if it was editing existing alarm
+        // if it was editing existent alarm
         if let editingIndexPath = editingIndexPath {
             appDelegate?.manageSettingUpLocalNotificationFor(alarm)
             addOrEdit(alarm, at: editingIndexPath)
@@ -175,8 +170,8 @@ class AlarmsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     // MARK: - CoreData functionality
-    private func addOrEdit(_ alarm: Alarm, at indexPath: IndexPath? = nil) {
-            
+    func addOrEdit(_ alarm: Alarm, at indexPath: IndexPath? = nil) {
+            // if it was editing existent alarm
             if indexPath != nil {
                 if let alarmToEdit = CoreDataManager.shared.fetchedRC?.object(at: indexPath!) {
                     alarmToEdit.time = Int32(alarm.time)
@@ -191,6 +186,7 @@ class AlarmsViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     // CreationDate is used as an alarm identifier
                     CoreDataManager.shared.appDelegate.saveContext()
                 }
+                // if it was adding new alarm
             } else {
                 let newAlarm = Alarms(entity: Alarms.entity(), insertInto: CoreDataManager.shared.context)
                 newAlarm.time = Int32(alarm.time)

@@ -19,10 +19,10 @@ class CoreDataManager {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var fetchedRC: NSFetchedResultsController<Alarms>!
-    
+    // Configure CoreData data store
     func refresh() {
         let request = Alarms.fetchRequest() as NSFetchRequest<Alarms>
-        
+        // Ascending stored alarms based on their time
         let sort = NSSortDescriptor(key: #keyPath(Alarms.time), ascending: true)
         request.sortDescriptors = [sort]
         fetchedRC = NSFetchedResultsController(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
@@ -36,7 +36,7 @@ class CoreDataManager {
 }
 
 extension CoreDataManager {
-    
+    // This method used to fetch a particular stored alarm using its creationDateID attribute
     func fetchAlarm(with alarmCreationDateID: String) -> Alarms? {
         let request = Alarms.fetchRequest() as NSFetchRequest<Alarms>
 

@@ -16,7 +16,8 @@ extension Alarms {
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Alarms> {
         return NSFetchRequest<Alarms>(entityName: "Alarms")
     }
-
+    
+    // All of these attributes are necessary therefore none of them is optional
     @NSManaged public var repeatMon: Bool
     @NSManaged public var repeatTue: Bool
     @NSManaged public var repeatWed: Bool

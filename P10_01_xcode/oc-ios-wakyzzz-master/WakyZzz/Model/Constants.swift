@@ -29,7 +29,7 @@ enum ActionButtonsTitle: String {
         messageFamily = "message a family member",
         deferTask = "I promis I will do it later",
         taskComplete = "I have completed the task",
-        deferTaskAgain = "No, I promis I will complete it later"
+        deferTaskAgain = "No, seriously I promis I will do it later"
 }
 
 enum AlarmSoundNames: String {
