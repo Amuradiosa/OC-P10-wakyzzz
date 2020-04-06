@@ -52,6 +52,7 @@
 		0424EB6A20BEF96400E15E46 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		0424EB6C20BF022900E15E46 /* AlarmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmTableViewCell.swift; sourceTree = "<group>"; };
 		0424EB6E20BF0FAE00E15E46 /* SettingAlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAlarmViewController.swift; sourceTree = "<group>"; };
+		1539FE44243A454E00F017C2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1581E9AA2408787B002F4D4F /* WakyZzz.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WakyZzz.xcdatamodel; sourceTree = "<group>"; };
 		1581E9B1240A70DF002F4D4F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		1581E9BE2415575D002F4D4F /* Alarms+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alarms+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -89,6 +90,7 @@
 		0424EB4720BEF89000E15E46 = {
 			isa = PBXGroup;
 			children = (
+				1539FE44243A454E00F017C2 /* README.md */,
 				0424EB5220BEF89000E15E46 /* WakyZzz */,
 				1581E9E4242CC652002F4D4F /* WakyZzzTests */,
 				0424EB5120BEF89000E15E46 /* Products */,

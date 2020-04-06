@@ -95,7 +95,6 @@ extension AppDelegate {
             if repeatDays.filter({$0 == true}).count == 0 {
                 alarm.enabled = false
                 CoreDataManager.shared.appDelegate.saveContext()
-                removePendingNotificationFor(alarmID: alarm.creationDateID)
             }
         }
     }
