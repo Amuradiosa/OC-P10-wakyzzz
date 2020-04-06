@@ -1,8 +1,8 @@
-#  OpenClassrooms - iOS developer path - iOS Project 9
-## WakyZzz - Adaptive layout (iPhones and iPads)
+#  OpenClassrooms - iOS developer path - iOS Project 10
+## WakyZzz - portrait/landscape (iPhones and iPads)
 ## XCTest - User Notification - Core Data
 
-This is an existing alarm app that needs to be fixed and more features added to it in order to function like an alarm. Unit tests have been added along with tests report and "findings and fixex" documentation.<br/>
+This is an existing alarm app that needs to be fixed and more features added to it in order to function properly like an alarm. Unit tests have been added along with tests report and "findings and fixex" documentation.<br/>
 The app uses local notification to alert the user.
 The user can set an alarm for a given time.<br/>
 This alarm can go off one time or every selected day of the week.<br/>
@@ -47,7 +47,7 @@ If the user chooses to tap on snooze again,  the alarm will then go off again af
 <img src="P10_01_xcode/Images/11.png" width="300">
 </p><br/>
 
-When the user tap on either act of kindness' actions, the sms app will launch and it will be filled with a randomly picked pre-compiled kind text.
+When the user tap on either act of kindness' actions, the sms app will launch and it will be filled with a randomly picked predetermined kind text.
 The user also can delay his/her promise and can be reminded two to four hours later through user notification.<br/>
 
 <p align="center">
